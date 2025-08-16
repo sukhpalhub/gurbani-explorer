@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'GurbaniAkharThick';
+    src: url('/static/GurbaniAkharThick.ttf') format('truetype');
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background: transparent; /* 🔹 Fully transparent background */
+}
+
+.top-aligned-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0.05); /* 🔹 Light black background only here */
+}
+
+.fit-text {
+    font-size: calc(1rem + 2vw);
+    line-height: 1.4;
+    max-width: 90%;
+    margin-bottom: 1rem;
+}
+
+.gurmukhi-1 {
+    font-family: 'GurbaniAkharThick';
+    font-size: calc(1.5rem + 2vw);
+    font-weight: bold;
+}

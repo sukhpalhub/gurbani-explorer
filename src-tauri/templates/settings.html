@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/bulma.min.css">
+</head>
+<body>
+<section class="section">
+    <div class="container">
+        <h1 class="title">Customize Display</h1>
+        <form method="post" action="/save_settings">
+            <div class="field">
+                <label class="label">Theme</label>
+                <div class="select">
+                    <select name="theme">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Font</label>
+                <div class="select">
+                    <select name="font">
+                        <option value="GurbaniAkharThick">Gurbani Akhar Thick</option>
+                        <option value="sans-serif">Sans Serif</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <button type="submit" class="button is-primary">Save Settings</button>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>

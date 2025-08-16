@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/bulma.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background: transparent;
+        }
+
+        body {
+            {% if theme == "dark" %}
+                background-color: #111;
+                color: white;
+            {% else %}
+                background-color: transparent;
+                color: black;
+            {% endif %}
+        }
+
+        .gurmukhi-1 {
+            font-family: '{{ font }}';
+        }
+    </style>
 </head>
 <body>
-    <p><strong>Gurmukhi:</strong> {{ gurmukhi }}</p>
-    <p><strong>Punjabi:</strong> {{ punjabi }}</p>
-    <p><strong>English:</strong> {{ english }}</p>
+    <section class="top-aligned-container">
+        <p class="gurmukhi-1 fit-text">{{ gurmukhi }}</p>
+        <p class="fit-text">{{ punjabi }}</p>
+        <p class="fit-text">{{ english }}</p>
+    </section>
 </body>
 </html>
